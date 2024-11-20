@@ -25,8 +25,8 @@ data = {
     'invite_code': '3guPMWLn',
     'email_code': '',
 }
-v2_url = ['0','1']
-for i in range(2):
+v2_url = ['0','1','3']
+for i in range(3):
         account = ''
         randomlength = 10
         base_str = '0123456789'
