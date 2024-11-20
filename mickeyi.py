@@ -44,6 +44,7 @@ for i in range(10):
         response = response.json()
         token = response['data']['token']
         print(token)
+        #print(f"https://sub.mickeyi.lol/api/v1/client/subscribe?token={token}")
         v2_url[i] = f"https://sub.mickeyi.lol/api/v1/client/subscribe?token={token}|"
         print(v2_url[i])
         time.sleep(300)
