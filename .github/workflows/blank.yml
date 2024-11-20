@@ -14,7 +14,6 @@ permissions:
 
 jobs:
   job1:
-    build:
       runs-on: ubuntu-latest
       env:
         TZ: Asia/Shanghai
@@ -33,8 +32,7 @@ jobs:
           python mickeyi.py
         env:
           ydyp: ${{ secrets.ydyp }}
-  jobs2:
-    build:
+  job2:
       runs-on: windows-latest
       env:
         TZ: Asia/Shanghai
