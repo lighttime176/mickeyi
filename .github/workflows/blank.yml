@@ -33,7 +33,7 @@ jobs:
         env:
           ydyp: ${{ secrets.ydyp }}
   job2:
-      runs-on: ubuntu-24.04​
+      runs-on: macos-13
       env:
         TZ: Asia/Shanghai
       steps:
@@ -52,7 +52,7 @@ jobs:
         env:
           ydyp: ${{ secrets.ydyp }}
   job3:
-    runs-on: ubuntu-24.04​
+    runs-on: macos-14
     env:
       TZ: Asia/Shanghai
     steps:
@@ -71,7 +71,7 @@ jobs:
       env:
         ydyp: ${{ secrets.ydyp }}
   job4:
-      runs-on: ubuntu-22.04​
+      runs-on: ubuntu-latest
       env:
         TZ: Asia/Shanghai
       steps:
@@ -90,7 +90,7 @@ jobs:
         env:
           ydyp: ${{ secrets.ydyp }}
   job5:
-      runs-on: ubuntu-22.04​
+      runs-on: macos-15
       env:
         TZ: Asia/Shanghai
       steps:
