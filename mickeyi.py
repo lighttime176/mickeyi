@@ -47,7 +47,7 @@ for i in range(10):
         #print(f"https://sub.mickeyi.lol/api/v1/client/subscribe?token={token}")
         v2_url[i] = f"https://sub.mickeyi.lol/api/v1/client/subscribe?token={token}|"
         print(v2_url[i])
-        time.sleep(60)
+        time.sleep(120)
 strr = ''
 for i in v2_url:
         strr = strr + str(i)
