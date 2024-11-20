@@ -25,9 +25,8 @@ data = {
     'invite_code': '3guPMWLn',
     'email_code': '',
 }
-v2_url = []
+v2_url = ['0','1','2','3','4','5','6','7','8','9']
 for i in range(10):
-        v2_url.append(str(i))
         account = ''
         randomlength = 10
         base_str = '0123456789'
@@ -45,7 +44,7 @@ for i in range(10):
         response = response.json()
         token = response['data']['token']
         print(token)
-        v2_url[i] = f"https://sub.mickeyi.lol/api/v1/client/subscribe?token={token}"
+        v2_url[i] = f"https://sub.mickeyi.lol/api/v1/client/subscribe?token={token}|"
         print(v2_url[i])
         time.sleep(300)
 strr = ''
