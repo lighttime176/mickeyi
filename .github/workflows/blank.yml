@@ -33,7 +33,7 @@ jobs:
         env:
           ydyp: ${{ secrets.ydyp }}
   job2:
-      runs-on: windows-latest
+      runs-on: ubuntu-latest
       env:
         TZ: Asia/Shanghai
       steps:
