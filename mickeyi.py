@@ -42,7 +42,8 @@ print(response.json())
 response = response.json()
 token = response['data']['token']
 print(token)
-
+v2_url = f"https://sub.mickeyi.lol/api/v1/client/subscribe?token={token}|"
+print(v2_url)
 
 
 
