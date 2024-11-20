@@ -1,5 +1,6 @@
 import requests
 import random
+import time
 headers = {
         'accept': 'application/json, text/plain, */*',
         'accept-language': 'zh-CN,zh;q=0.9',
@@ -24,27 +25,34 @@ data = {
     'invite_code': '3guPMWLn',
     'email_code': '',
 }
-
-account = ''
-randomlength = 10
-base_str = '0123456789'
-length = len(base_str) - 1
-for i in range(randomlength):
-    account += base_str[random.randint(0, length)]
-print(account)
-data['email'] = f"{account}@qq.com"
-
-response = requests.post('https://business.mickey.business/api/v1/passport/auth/register',
-                         headers=headers, data=data)
-# response = requests.post('http://business.mickey.business/api/v1/passport/auth/register', headers=headers, cookies = cookies,data=data, proxies=proxies)
-print(response)
-print(response.json())
-response = response.json()
-token = response['data']['token']
-print(token)
-v2_url = f"https://sub.mickeyi.lol/api/v1/client/subscribe?token={token}|"
-print(v2_url)
-
+v2_url = []
+for i in range(10):
+        v2_url.append(str(i))
+        account = ''
+        randomlength = 10
+        base_str = '0123456789'
+        length = len(base_str) - 1
+        for i in range(randomlength):
+            account += base_str[random.randint(0, length)]
+        print(account)
+        data['email'] = f"{account}@qq.com"
+        
+        response = requests.post('https://business.mickey.business/api/v1/passport/auth/register',
+                                 headers=headers, data=data)
+        # response = requests.post('http://business.mickey.business/api/v1/passport/auth/register', headers=headers, cookies = cookies,data=data, proxies=proxies)
+        print(response)
+        print(response.json())
+        response = response.json()
+        token = response['data']['token']
+        print(token)
+        v2_url[i] = f"https://sub.mickeyi.lol/api/v1/client/subscribe?token={token}"
+        print(v2_url[i])
+        time.sleep(300)
+strr = ''
+for i in v2_url:
+        strr = strr + str(i)
+print('strr:')
+print(strr)
 
 
 
