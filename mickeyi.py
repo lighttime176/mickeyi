@@ -33,7 +33,7 @@ for i in range(2):
         length = len(base_str) - 1
         for i_random in range(randomlength):
             account += base_str[random.randint(0, length)]
-        print(account)
+        #print(account)
         data['email'] = f"{account}@qq.com"
         
         response = requests.post('https://business.mickey.business/api/v1/passport/auth/register',
