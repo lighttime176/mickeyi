@@ -39,13 +39,14 @@ for i in range(2):
         response = requests.post('https://business.mickey.business/api/v1/passport/auth/register',
                                  headers=headers, data=data)
         # response = requests.post('http://business.mickey.business/api/v1/passport/auth/register', headers=headers, cookies = cookies,data=data, proxies=proxies)
-        #print(response)
+        
         #print(response.json())
-        response = response.json()
+        
         try:
+                response = response.json()
                 token = response['data']['token']
         except:
-                print(response.json())
+                print(response)
         #print(token)
         #print(f"https://sub.mickeyi.lol/api/v1/client/subscribe?token={token}")
         v2_url[i] = f"https://sub.mickeyi.lol/api/v1/client/subscribe?token={token}|"
