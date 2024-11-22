@@ -46,7 +46,7 @@ for i in range(2):
                 response = response.json()
                 token = response['data']['token']
         except:
-                print(response)
+                print(response.text)
         #print(token)
         #print(f"https://sub.mickeyi.lol/api/v1/client/subscribe?token={token}")
         v2_url[i] = f"https://sub.mickeyi.lol/api/v1/client/subscribe?token={token}|"
