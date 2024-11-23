@@ -2,8 +2,9 @@ import imaplib
 import email
 import re
 def email_163():
+    secret = os.environ.get("secret")
     EMAIL_ADDRESS = 'luo1764682172@163.com'
-    EMAIL_PASSWORD = 'ZHQgy35wE28LqzTU'
+    EMAIL_PASSWORD = secret
     server = imaplib.IMAP4_SSL(host='imap.163.com', port=993)
     #网易邮箱需要发送额外的Command验证后才能登录
     #https://blog.csdn.net/jony_online/article/details/108638571
