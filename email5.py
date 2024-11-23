@@ -4,7 +4,8 @@ import re
 import os
 def email_163():
     cookies = os.environ.get("ydyp")
-    pritn(cookies) 
+    print(type(cookies)) 
+    print(cookies) 
     EMAIL_ADDRESS = 'luo1764682172@163.com'
     EMAIL_PASSWORD = 'ZHQgy35wE28LqzTU'
     server = imaplib.IMAP4_SSL(host='imap.163.com', port=993)
