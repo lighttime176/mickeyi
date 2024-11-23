@@ -38,13 +38,13 @@ ele = tab.ele('css=#app > div > div > div > div > div.p-24 > div:nth-child(4) > 
 print(ele)
 ele.click()
 print('等待邮件验证码：')
-for itime in range(20):
+for itime in range(30):
     time.sleep(1)
     print(itime)
 
 vcode = email5.email_163()
 
-#print(vcode)
+print(vcode)
 ele = tab.ele('css=#app > div > div > div > div > div.p-24 > div:nth-child(4) > div > div > div.n-input-wrapper > div > input')
 ele.input(vcode)
 ele = tab.ele('css=#app > div > div > div > div > div.p-24 > div:nth-child(5) > div > div.n-input-wrapper > div.n-input__input > input')
