@@ -31,7 +31,7 @@ jobs:
         run: |
           python mickeyi.py
         env:
-          ydyp: ${{ secrets.ydyp }}
+          secret: ${{ secrets.secret }}
 
 
 
