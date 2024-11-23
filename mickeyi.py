@@ -44,7 +44,7 @@ for itime in range(30):
 
 vcode = email5.email_163()
 
-print(vcode)
+#print(vcode)
 ele = tab.ele('css=#app > div > div > div > div > div.p-24 > div:nth-child(4) > div > div > div.n-input-wrapper > div > input')
 ele.input(vcode)
 ele = tab.ele('css=#app > div > div > div > div > div.p-24 > div:nth-child(5) > div > div.n-input-wrapper > div.n-input__input > input')
