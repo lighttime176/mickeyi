@@ -2,7 +2,6 @@ import random,time
 import imaplib
 import email
 import re
-import email5
 from DrissionPage import ChromiumPage
 from DrissionPage import ChromiumOptions
 
