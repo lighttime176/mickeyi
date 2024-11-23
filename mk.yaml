@@ -1,4 +1,4 @@
-mixed-port: 12334
+mixed-port: 7897
 allow-lan: true
 bind-address: '*'
 mode: rule
